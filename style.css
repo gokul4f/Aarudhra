@@ -35,7 +35,7 @@ nav a:hover {
 /* Hero image */
 .hero-image {
     width: 100%;
-    height: 320px;
+    height: 260px;
     object-fit: cover;
 }
 
@@ -184,5 +184,6 @@ nav a:hover {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
