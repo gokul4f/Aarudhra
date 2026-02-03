@@ -12,14 +12,14 @@ function openPopup(product) {
   }
 
   if (product === "copra") {
-    img.src = "images/copra.jpg";
+    img.src = "images/gallery-copra.jpg";
     title.innerText = "Coconut Copra";
     desc.innerText =
       "Sun-dried, milling grade copra sourced from Kangayam region. Consistent quality suitable for oil extraction.";
   }
 
   if (product === "cake") {
-    img.src = "images/coconut-cake.jpg";
+    img.src = "images/gallery-cake.jpg";
     title.innerText = "Coconut Cake";
     desc.innerText =
       "High oil content coconut cake used for cattle feed and industrial purposes. Available in bulk quantities.";
