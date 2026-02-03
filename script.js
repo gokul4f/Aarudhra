@@ -31,3 +31,11 @@ function openPopup(product) {
 function closePopup() {
   document.getElementById("productPopup").style.display = "none";
 }
+
+window.onclick = function (event) {
+  const popup = document.getElementById("productPopup");
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
+};
+
