@@ -7,29 +7,57 @@
 }
 
 /* Header */
+/* Header (Sticky) */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
     background-color: #1f7a4d;
     color: white;
-    padding: 20px 40px;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* Header layout */
 header h1 {
     margin: 0;
 }
 
+/* Navigation */
 nav {
-    margin-top: 10px;
+    margin-top: 8px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+/* Animated underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #bff0d4;
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #e6fff3;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Hero image */
@@ -47,13 +75,28 @@ nav a:hover {
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
+
 
 .section h2 {
     color: #1f7a4d;
     margin-bottom: 15px;
+    font-size: 28px;
+    position: relative;
 }
+
+/* Accent line under heading */
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #1f7a4d;
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
 
 /* Product image */
 .product-image {
@@ -192,6 +235,16 @@ nav a:hover {
   cursor: pointer;
 }
 
+.popup.fade-out {
+  animation: fadeOut 0.25s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
+
+
 .close:hover {
   color: #000;
 }
@@ -201,6 +254,12 @@ nav a:hover {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 
 
 
