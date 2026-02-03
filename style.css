@@ -214,6 +214,8 @@ nav a:hover::after {
   padding: 30px;
   max-width: 500px;
   width: 90%;
+  max-height: 85vh;        /* KEY FIX */
+  overflow-y: auto;
   border-radius: 12px;
   text-align: center;
   animation: zoomIn 0.3s ease;
@@ -221,6 +223,8 @@ nav a:hover::after {
 
 .popup-content img {
   width: 100%;
+  max-height: 300px;     /* Prevent tall images */
+  object-fit: contain;   /* No cropping */
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -258,6 +262,7 @@ nav a:hover::after {
 html {
   scroll-behavior: smooth;
 }
+
 
 
 
