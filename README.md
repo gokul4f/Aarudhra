@@ -1,2 +1,2 @@
 # Aarudhra
-This repository is for creating my company wensite
+This repository is for creating my company website
