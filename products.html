@@ -2,79 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Products | Aarudhra Oil Industries</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Main CSS -->
+  <title>Products | Aarudhra Oil Industries</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+  <h1>Aarudhra Oil Industries</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <!-- HEADER / NAVIGATION -->
-  <header>
-   
-      <h1 >Aarudhra Oil Industries</h1>
-      <nav>
-          <a href="index.html">Home</a>
-          <a href="products.html" class="active">Products</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact</a>
-        
-      </nav>
-   
-  </header>
+<section class="products">
+  <h2>Our Products</h2>
+  <p class="subtitle">High-quality coconut-based products tailored for bulk buyers, traders, and processing units.</p>
 
-  <!-- PRODUCTS SECTION -->
-  <section class="products">
-    <h2>Our Products</h2>
-    <p class="subtitle">
-      Supplying high-quality coconut-based products for bulk buyers and traders
-    </p>
+  <div class="product-grid">
+    <article class="product-card" onclick="openPopup('oil')">
+      <img src="images/coconut-oil.jpg" alt="Expeller Coconut Oil">
+      <h3>Expeller Coconut Oil</h3>
+      <p>Pure • Natural • Bulk Supply</p>
+      <ul>
+        <li>Use: edible, industrial, cosmetic</li>
+        <li>Custom bulk packing available</li>
+        <li>Consistent batch quality</li>
+      </ul>
+    </article>
 
-    <div class="product-grid">
+    <article class="product-card" onclick="openPopup('copra')">
+      <img src="images/gallery-copra.jpg" alt="Coconut Copra">
+      <h3>Coconut Copra</h3>
+      <p>Sun-dried • Milling Grade</p>
+      <ul>
+        <li>High quality copra sourcing</li>
+        <li>Ideal for oil extraction</li>
+        <li>Regular bulk dispatch</li>
+      </ul>
+    </article>
 
-      <div class="product-card" onclick="openPopup('oil')">
-        <img src="images/coconut-oil.jpg" alt="Expeller Coconut Oil">
-        <h3>Expeller Coconut Oil</h3>
-        <p>Pure • Natural • Bulk Supply</p>
-      </div>
-
-      <div class="product-card" onclick="openPopup('copra')">
-        <img src="images/gallery-copra.jpg" alt="Coconut Copra">
-        <h3>Coconut Copra</h3>
-        <p>Sun-dried • Milling Grade</p>
-      </div>
-
-      <div class="product-card" onclick="openPopup('cake')">
-        <img src="images/gallery-cake.jpg" alt="Coconut Cake">
-        <h3>Coconut Cake</h3>
-        <p>High Oil Content • Bulk</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PRODUCT POPUP -->
-  <div id="productPopup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <img id="popupImage" src="" alt="">
-      <h3 id="popupTitle"></h3>
-      <p id="popupDescription"></p>
-    </div>
+    <article class="product-card" onclick="openPopup('cake')">
+      <img src="images/gallery-cake.jpg" alt="Coconut Cake">
+      <h3>Coconut Cake</h3>
+      <p>High Oil Content • Bulk</p>
+      <ul>
+        <li>For feed and industrial use</li>
+        <li>Reliable monthly supply</li>
+        <li>Cost-effective procurement</li>
+      </ul>
+    </article>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Aarudhra Oil Industries, Kangayam, Tamil Nadu</p>
-  </footer>
+  <div class="products-cta reveal">
+    <h3>Need pricing for large quantities?</h3>
+    <p>Share your quantity and location. We will suggest packaging and dispatch options.</p>
+    <button class="btn btn-primary" data-open-quote>Request Quote</button>
+  </div>
+</section>
 
-  <!-- JAVASCRIPT -->
-  <script src="script.js"></script>
+<div id="productPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img id="popupImage" src="" alt="">
+    <h3 id="popupTitle"></h3>
+    <p id="popupDescription"></p>
+  </div>
+</div>
 
+<footer class="footer">© 2026 Aarudhra Oil Industries, Kangayam, Tamil Nadu</footer>
+
+<div id="quoteModal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" data-close-quote aria-label="Close quote form">×</button>
+    <h3>Request a Bulk Quote</h3>
+    <form class="quote-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Business Name" required>
+      <input type="tel" placeholder="Phone / WhatsApp" required>
+      <select required>
+        <option value="">Select Product</option>
+        <option>Expeller Coconut Oil</option>
+        <option>Coconut Copra</option>
+        <option>Coconut Cake</option>
+      </select>
+      <textarea rows="4" placeholder="Expected quantity and timeline"></textarea>
+      <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
